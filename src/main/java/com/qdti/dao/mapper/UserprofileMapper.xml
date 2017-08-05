@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qdti.dao.domain.UserprofileMapper">
+  <resultMap id="BaseResultMap" type="com.qdti.dao.model.Userprofile">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userId" jdbcType="INTEGER" property="userid" />
+    <result column="telephone" jdbcType="VARCHAR" property="telephone" />
+    <result column="currentcountycode" jdbcType="VARCHAR" property="currentcountycode" />
+    <result column="destcountycode" jdbcType="VARCHAR" property="destcountycode" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userId, telephone, currentcountycode, destcountycode
+  </sql>
+  <insert id="insertSelective" parameterType="com.qdti.dao.model.Userprofile">
+    insert into userProfile
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userid != null">
+        userId,
+      </if>
+      <if test="telephone != null">
+        telephone,
+      </if>
+      <if test="currentcountycode != null">
+        currentcountycode,
+      </if>
+      <if test="destcountycode != null">
+        destcountycode,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="telephone != null">
+        #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="currentcountycode != null">
+        #{currentcountycode,jdbcType=VARCHAR},
+      </if>
+      <if test="destcountycode != null">
+        #{destcountycode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qdti.dao.model.Userprofile">
+    update userProfile
+    <set>
+      <if test="userid != null">
+        userId = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="telephone != null">
+        telephone = #{telephone,jdbcType=VARCHAR},
+      </if>
+      <if test="currentcountycode != null">
+        currentcountycode = #{currentcountycode,jdbcType=VARCHAR},
+      </if>
+      <if test="destcountycode != null">
+        destcountycode = #{destcountycode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
