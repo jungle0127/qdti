@@ -34,17 +34,17 @@
 		<img src="imgs/huijia.png" class="img-circle" alt="bus">
 		<div class="input-group">
 			<span class="glyphicon glyphicon-search input-group-addon">查询</span>
-			<input type="text" class="form-control" placeholder="请输入目的城市">
+			<input type="text" class="form-control text-lg" placeholder="请输入目的城市">
 		</div>
+	</div>
+	<div class="container-fluid bg-3 text-center">
+		<h3>联系我们</h3>
+		<p>Lorem ipsum..</p>
 	</div>
 	<div class="container-fluid bg-2 text-center">
 		<h3>我们是谁</h3>
 		<p>Lorem ipsum..</p>
 	</div>
 
-	<div class="container-fluid bg-3 text-center">
-		<h3>联系我们</h3>
-		<p>Lorem ipsum..</p>
-	</div>
 </body>
 </html>

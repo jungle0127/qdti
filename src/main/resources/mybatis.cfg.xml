@@ -1,1 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<mappers>
+		<mapper resource="com/qdti/dao/mapper/CityMapper.xml"/>
+		<mapper resource="com/qdti/dao/mapper/CountyMapper.xml"/>
+		<mapper resource="com/qdti/dao/mapper/ProvinceMapper.xml"/>
+		<mapper resource="com/qdti/dao/mapper/UsersMapper.xml"/>
+		<mapper resource="com/qdti/dao/mapper/UserprofileMapper.xml"/>
+		<mapper resource="com/qdti/dao/mapper/UsertypeMapper.xml"/>	
+	</mappers>
+</configuration>
