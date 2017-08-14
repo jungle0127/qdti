@@ -23,7 +23,7 @@ public class UserInfoController {
 	public ModelAndView getUsers(ModelAndView mv,HttpSession session){
 		List<Users> userList = this.userService.getAllUsers();
 		mv.addObject(userList);
-		mv.setViewName("login");
+		mv.setViewName("main");
 		return mv;		
 	}
 }
