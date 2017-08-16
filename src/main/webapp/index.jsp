@@ -20,7 +20,7 @@
 }
 
 .form-bg {
-	background: #00b4ef;
+	background: #00b4ef;  
 }
 
 .form-horizontal {
