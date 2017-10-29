@@ -14,4 +14,9 @@ public class IndexController {
 		mv.setViewName("main");
 		return mv;
 	}
+	@RequestMapping(value="/login", method={RequestMethod.GET})
+	public ModelAndView redirectToLogin(ModelAndView mv, HttpSession session){
+		mv.setViewName("login");
+		return mv;
+	}
 }
